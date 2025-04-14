@@ -1,45 +1,45 @@
-// Exercicio 6
-function calcularMedia(notas) {
-    if (notas.length !== 7) {
-      console.log("Erro: É necessário informar exatamente 7 notas.");
-      return;
+//Exercicio 8:
+console.log("EXERCICIO 9")
+// Texto para análise
+const texto = "Tecnologia é um produto da ciência e da engenharia que envolve um conjunto de instrumentos, métodos e técnicas que visam a resolução de problemas.";
+
+// Função principal que executa todas as buscas
+function realizarBuscas() {
+    console.log("=== RESULTADOS DAS BUSCAS ===");
+    console.log(`Texto analisado: "${texto}"\n`);
+
+    // 1) Buscar a primeira posição de "em"
+    const posicaoEm = texto.indexOf("em");
+    console.log(`1) Primeira posição de "em": ${posicaoEm !== -1 ? posicaoEm : 'Não encontrado'}`);
+    if (posicaoEm !== -1) {
+        console.log(`   Contexto: "...${texto.substring(Math.max(0, posicaoEm - 5), posicaoEm + 7)}..."`);
     }
-  
-    let soma = 0;
-    for (let i = 0; i < notas.length; i++) {
-      soma += notas[i];
+
+    // 2) Buscar a última posição de "ia"
+    const posicaoIa = texto.lastIndexOf("ia");
+    console.log(`\n2) Última posição de "ia": ${posicaoIa !== -1 ? posicaoIa : 'Não encontrado'}`);
+    if (posicaoIa !== -1) {
+        console.log(`   Contexto: "...${texto.substring(Math.max(0, posicaoIa - 5), posicaoIa + 7)}..."`);
     }
-  
-    let media = soma / notas.length;
-    console.log("Média final: " + media.toFixed(2));
-  
-    if (media >= 6) {
-      console.log("Parabéns! Você foi APROVADO.");
-    } else {
-      console.log("Infelizmente, você foi REPROVADO.");
+
+    // 3) Buscar a palavra "ciência" (busca exata)
+    const regexCiencia = /\bciência\b/;
+    const matchCiencia = texto.match(regexCiencia);
+    console.log(`\n3) Palavra "ciência" encontrada? ${matchCiencia ? 'Sim' : 'Não'}`);
+    if (matchCiencia) {
+        console.log(`   Posição: ${texto.indexOf(matchCiencia[0])}`);
+        console.log(`   Contexto: "...${texto.substring(Math.max(0, texto.indexOf(matchCiencia[0]) - 10), texto.indexOf(matchCiencia[0]) + matchCiencia[0].length + 10)}..."`);
     }
-  }
-  
-  
-  let notasDoAluno = [7.5, 6.0, 8.0, 5.5, 6.5, 7.0, 6.0];
-  calcularMedia(notasDoAluno);
-  
-//Exercicio 7
 
-// Dados do aluno
-const nome = "Maria Oliveira";
-const idade = 20;
-const curso = "Engenharia de Software";
-const ano = 2025;
+    // 4) Buscar a palavra "métodos" (busca exata)
+    const regexMetodos = /\bmétodos\b/;
+    const matchMetodos = texto.match(regexMetodos);
+    console.log(`\n4) Palavra "métodos" encontrada? ${matchMetodos ? 'Sim' : 'Não'}`);
+    if (matchMetodos) {
+        console.log(`   Posição: ${texto.indexOf(matchMetodos[0])}`);
+        console.log(`   Contexto: "...${texto.substring(Math.max(0, texto.indexOf(matchMetodos[0]) - 10), texto.indexOf(matchMetodos[0]) + matchMetodos[0].length + 10)}..."`);
+    }
+}
 
-// Montando o conteúdo para exibir
-const conteudo = `
-  Nome: ${nome}<br>
-  Idade: ${idade}<br>
-  Curso: ${curso}<br>
-  Ano: ${ano}
-`;
-
-// Exibindo na tela
-document.getElementById("saida").innerHTML = conteudo;
-
+// Executar a função principal
+realizarBuscas();
