@@ -23,3 +23,20 @@ let d = 21;
 console.log(d);
 //Aqui, a variável d recebeu um valor numérico direto.
 
+// EXERCICIO 2 COMO USAR OPERADORES
+
+let a = 5;
+let b = "5";
+
+console.log(a == b); // true
+
+let x = 10;
+let y = "10";
+
+console.log(x != y); // false
+
+
+let idade = 18;
+
+console.log(idade >= 18); // true
+console.log(idade >= 21); // false
