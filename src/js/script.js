@@ -43,3 +43,26 @@ function realizarBuscas() {
 
 // Executar a função principal
 realizarBuscas();
+
+//Exercicio 9
+console.log("EXERCICIO 9")
+// Programa de conversão de tipos
+function demonstrarConversao() {
+  // 1. Declarar a variável como String
+  let valor = "3.1415";
+  console.log("Valor original:", valor);
+  console.log("Tipo original:", typeof valor);
+
+  // 2. Converter para float (número decimal)
+  let valorConvertido = parseFloat(valor);
+  console.log("\nValor convertido:", valorConvertido);
+  console.log("Tipo após conversão:", typeof valorConvertido);
+
+  // 3. Verificação adicional
+  console.log("\nVerificações:");
+  console.log("É NaN (Not a Number)?", isNaN(valorConvertido) ? "Sim" : "Não");
+  console.log("Valor arredondado:", Math.round(valorConvertido * 100) / 100);
+}
+
+// Executar a demonstração
+demonstrarConversao();
