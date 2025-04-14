@@ -24,3 +24,22 @@ function calcularMedia(notas) {
   let notasDoAluno = [7.5, 6.0, 8.0, 5.5, 6.5, 7.0, 6.0];
   calcularMedia(notasDoAluno);
   
+//Exercicio 7
+
+// Dados do aluno
+const nome = "Maria Oliveira";
+const idade = 20;
+const curso = "Engenharia de Software";
+const ano = 2025;
+
+// Montando o conteúdo para exibir
+const conteudo = `
+  Nome: ${nome}<br>
+  Idade: ${idade}<br>
+  Curso: ${curso}<br>
+  Ano: ${ano}
+`;
+
+// Exibindo na tela
+document.getElementById("saida").innerHTML = conteudo;
+
