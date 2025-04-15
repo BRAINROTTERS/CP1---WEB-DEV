@@ -3,7 +3,15 @@ for (let i = 0; i < 50;i++)
     {
       console.log("o valor de i:" + i);
     }
+//exercicio 5
 
+const usuario = "admin"
+const senha = 1234
+if (usuario == "admin" && senha == 1234){
+  console.log("usuario correto")
+}else{
+  console.log("usuario nao encontrado")
+}
 
 
 
