@@ -1,3 +1,13 @@
+//exercicio 4
+for (let i = 0; i < 50;i++)
+    {
+      console.log("o valor de i:" + i);
+    }
+
+
+
+
+
 //Exercicio 8:
 console.log("EXERCICIO 9")
 // Texto para análise
