@@ -60,11 +60,11 @@
  console.log(idade >= 21); // false
 
 //EXERCICIO 3 - FUNÇÕES
-#include <stdio.h>
 
-int main() {
-    float peso, altura, imc;
-    int faixa;
+
+  main()
+   float (peso, altura, imc);
+    int (faixa);
 
     printf("Digite o peso (kg): ");
     scanf("%f", $peso);
@@ -98,8 +98,8 @@ int main() {
             printf("Erro ao calcular a faixa do IMC.\n");
     }
 
-    return 0;
-}
+    
+
 
 //exercicio 4
 for (let i = 0; i < 50;i++)
